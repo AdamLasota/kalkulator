@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>prejekt kalkulator</title>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="styl.css">
+<link href="https://fonts.googleapis.com/css?family=Codystar" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">  
+
+
+</head>
+<body>
+<div id ="mainContainer">
+	<form name="calculator">
+		<table>
+			<tr>
+				<td colspan="4"> <input type="text" name="display" id="display" value="" disabled/> </td>
+			</tr>
+			<tr>
+				<td><input type="button" name="one" value="1" onclick="check_display('1')"/></td>
+				<td><input type="button" name="two" value="2" onclick="check_display('2')"/></td>
+				<td><input type="button" name="three" value="3" onclick="check_display('3')"/></td>
+				<td><input type="button" name="minus" value="-" onclick="check_display_symbol('-')"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="four" value="4" onclick="check_display('4')"/></td>
+				<td><input type="button" name="five" value="5" onclick="check_display('5')"/></td>
+				<td><input type="button" name="six" value="6" onclick="check_display('6')"/></td>
+				<td><input type="button" name="plus" value="+" onclick="calculator.display.value += '+'"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="seven" value="7" onclick="check_display('7')"/></td>
+				<td><input type="button" name="eight" value="8" onclick="check_display('8')"/></td>
+				<td><input type="button" name="nine" value="9" onclick="check_display('9')"/></td>
+				<td><input type="button" name="square" value="x" onclick="calculator.display.value += '*'"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="half" value="," onclick="calculator.display.value += '.'"/></td>
+				<td><input type="button" name="zero" value="0" onclick="check_display('0')"/></td>
+				<td><input type="button" name="result" value="=" onclick="check_result()"/></td>
+				<td><input type="button" name="dziel" value="/" onclick="calculator.display.value += '/'"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" name="clear" value="clear" onclick="check_display_new('0')"/></td>
+				<td><input type="button" name="bracketOpen" value="(" onclick="check_display_bracketL('(')"/></td>
+				<td><input type="button" name="bracketClose" value=")" onclick="check_display_bracketR(')')"/></td>
+			</tr>
+		</table>
+	</form>
+</div>
+	
+	<script src="skrypt.js"></script>
+</body>
+</html>
